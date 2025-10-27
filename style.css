@@ -1,0 +1,197 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container giới hạn chiều rộng nội dung */
+.container {
+    width: 90%;
+    max-width: 1200px; /* Chiều rộng tối đa cho màn hình lớn */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky; /* Giữ header trên cùng khi cuộn */
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Màu nổi bật khi hover */
+}
+
+/* Các Section chung */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section:nth-child(even) { /* Màu nền cho các section chẵn */
+    background-color: #e9e9e9;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Section Giới Thiệu (Hero) */
+.hero {
+    background-color: white;
+    padding-top: 80px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #00bcd4;
+}
+
+/* Nút bấm chung */
+.btn {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0097a7;
+}
+
+/* Section Dự Án (CSS Grid) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.project-card h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.btn-small {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00bcd4;
+    text-decoration: none;
+    border: 1px solid #00bcd4;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-small:hover {
+    background-color: #00bcd4;
+    color: white;
+}
+
+/* Section Liên Hệ */
+.contact p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* MEDIA QUERIES cho tính Responsive */
+/* ==================================== */
+
+/* Kích thước màn hình nhỏ (ví dụ: Điện thoại di động) */
+@media (max-width: 768px) {
+    
+    /* Header/Navigation: Chuyển menu thành Stacked hoặc Hamburger (ở đây là Stacked đơn giản) */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Các phần khác */
+    section {
+        padding: 40px 0;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    /* Grid sẽ tự điều chỉnh do minmax(300px, 1fr) */
+    .project-grid {
+        grid-template-columns: 1fr; /* Hoặc 1 cột duy nhất nếu muốn */
+    }
+}
