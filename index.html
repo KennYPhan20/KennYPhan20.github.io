@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Đầu Tiên Của Tôi</title>
+    <title>Portfolio Cá Nhân - Tên Của Bạn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chào Mừng Đến Với Trang Web Của Tôi!</h1>
-    <p>Đây là nội dung được tạo bằng HTML.</p>
-    <p>Tôi đã sử dụng Namecheap và GitHub Pages để đưa nó lên mạng!</p>
+
+    <header>
+        <div class="container">
+            <h1>Tên Của Bạn</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Giới Thiệu</a></li>
+                    <li><a href="#projects">Dự Án</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="hero">
+        <div class="container">
+            <img src="avatar.jpg" alt="Ảnh đại diện" class="profile-img">
+            <h2>Xin Chào, Tôi là [Tên Của Bạn]</h2>
+            <p>Tôi là một [Vị trí/Chuyên môn], đam mê tạo ra các giải pháp web đẹp và hiệu quả. Tôi có kinh nghiệm với HTML, CSS, và [Kỹ năng khác].</p>
+            <a href="CV_Ban_Than.pdf" class="btn">Tải CV</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Các Dự Án Của Tôi</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Dự Án Web 1</h3>
+                    <p>Mô tả ngắn về dự án này. Sử dụng công nghệ X, Y, Z.</p>
+                    <a href="#" target="_blank" class="btn-small">Xem Demo</a>
+                </div>
+                <div class="project-card">
+                    <h3>Ứng Dụng Mobile 2</h3>
+                    <p>Mô tả ngắn về dự án này. Tập trung vào tính responsive và UX/UI.</p>
+                    <a href="#" target="_blank" class="btn-small">Xem Demo</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Liên Hệ Với Tôi</h2>
+            <p>Bạn có thể liên hệ với tôi qua email hoặc các mạng xã hội sau:</p>
+            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a> |
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Portfolio Cá Nhân. Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
